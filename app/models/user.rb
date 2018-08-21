@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
       user.uid        = auth[:uid]
       user.name       = auth[:info][:name]
       user.avatar_url = auth[:extra][:raw_info][:avatar_url]
+      user.token      = auth[:credentials][:token]
     end
   end
 
