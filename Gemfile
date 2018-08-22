@@ -42,6 +42,13 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
