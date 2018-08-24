@@ -20,8 +20,8 @@ class Profile
   end
 
   def repositories
-    repositories_json.map do |repo|
-      Repository.new(repo[:name], repo[:url])
+    repositories_json.map do |raw_repo|
+      Repository.new(raw_repo)
     end
   end
 
