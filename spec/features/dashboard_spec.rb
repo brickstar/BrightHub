@@ -23,7 +23,8 @@ describe 'user visits homepage' do
                     })
     .to_return(status: 200, body: repos, headers: {})
   end
-  xit 'can login' do
+
+  it 'can login' do
     visit root_path
 
     stub_omniauth
