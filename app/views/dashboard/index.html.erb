@@ -1,0 +1,11 @@
+<h2> Hello <%= current_user.name %> !</h2>
+<%= link_to "Logout", logout_path %>
+<%= image_tag @profile.avatar %>
+Repositories: <%= @profile.repository_count %>
+<h2>Repositories</h2>
+<% @profile.repositories.each do |repo| %>
+  <ul class="repository">
+    <li class="repo-name"><%= repo.name %></li>
+    <li class="repo-url"><%= repo.url %></li>
+  </ul>
+<% end %>

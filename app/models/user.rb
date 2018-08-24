@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
       user.provider   = auth[:provider]
       user.uid        = auth[:uid]
       user.name       = auth[:info][:name]
-      user.avatar_url = auth[:extra][:raw_info][:avatar_url]
       user.token      = auth[:credentials][:token]
+      user.login      = auth[:extra][:raw_info][:login]
     end
   end
 
